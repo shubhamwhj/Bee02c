@@ -15,6 +15,8 @@ images["base"] = pygame.image.load("base.png").convert_alpha()
 images["bee"] = pygame.image.load("bee.png").convert_alpha()
 images["pipe"] = pygame.image.load("pipe.png").convert_alpha()
 
+#Add code to create the Bee class
+
 groundx=0
 speed=5
 g=0.5
@@ -31,7 +33,9 @@ def flap():
     global speed
     speed=-10
     
- 
+#Add code to create Bee class object.
+
+
 while True:    
     screen.fill((50,150,255))
     screen.blit(images["bg"],[0,0])
@@ -41,8 +45,10 @@ while True:
             sys.exit()
         if event.type == pygame.KEYDOWN:
             if event.key == pygame.K_SPACE:
+                #Call flap() with the bee object 
                 flap()
-            
+                
+    #Call gravity() with the bee object        
     gravity()
     
     groundx =groundx-5
